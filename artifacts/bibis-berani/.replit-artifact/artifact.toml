@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "BIBIS BERANI"
+version = "1.0.0"
+id = "artifacts/bibis-berani"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 25344
+
+[services.development]
+run = "pnpm --filter @workspace/bibis-berani run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/bibis-berani", "run", "build" ]
+publicDir = "artifacts/bibis-berani/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "25344"
+BASE_PATH = "/"
