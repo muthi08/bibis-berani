@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
-import { Shield, BookOpen, HeartHandshake, Phone, Mail, Hand, MessageSquareWarning, Users, Smartphone, Heart, ArrowRight } from "lucide-react";
+import { Shield, BookOpen, HeartHandshake, Mail, Hand, MessageSquareWarning, Users, Smartphone, Heart, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import schoolLogo from "@assets/logo_sd_bibis_1782278696623.jpeg";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
@@ -28,8 +29,12 @@ function Navbar() {
   return (
     <nav className="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-md border-b border-gray-100 shadow-sm">
       <div className="container mx-auto px-4 md:px-6 h-16 flex items-center justify-between">
-        <div className="flex items-center gap-2 text-primary font-bold text-xl tracking-tight">
-          <Shield className="w-6 h-6 text-secondary" />
+        <div className="flex items-center gap-3 text-primary font-bold text-xl tracking-tight">
+          <img
+            src={schoolLogo}
+            alt="Logo SD Bibis Kasihan"
+            className="w-10 h-10 rounded-full object-cover border-2 border-white shadow-sm"
+          />
           <span>BIBIS BERANI</span>
         </div>
         <div className="hidden md:flex items-center gap-6 text-sm font-medium text-gray-600">
@@ -241,9 +246,17 @@ function VideoEdukasi() {
 
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {[
-              "https://www.youtube.com/embed/QP8lLe6g18k",
-              "https://www.youtube.com/embed/2hHr2cIv0ek",
-              "https://www.youtube.com/embed/HL4rNSV2DsU"
+              "https://www.youtube.com/embed/jQRceqm-dBI",
+              "https://www.youtube.com/embed/JJaqpZa34Eo",
+              "https://www.youtube.com/embed/rzRQ7HfRzG8",
+              "https://www.youtube.com/embed/5CfLW5aEBAw",
+              "https://www.youtube.com/embed/jmUwUbNnn2I",
+              "https://www.youtube.com/embed/SPxtYsSdBJg",
+              "https://www.youtube.com/embed/rRFKxtMd--E",
+              "https://www.youtube.com/embed/CfccgOShfmE",
+              "https://www.youtube.com/embed/86_uuX77hsc",
+              "https://www.youtube.com/embed/kMQzcsaRtyk",
+              "https://www.youtube.com/embed/am3sGO12f6Q"
             ].map((url, idx) => (
               <motion.div key={idx} variants={fadeInUp} className="rounded-2xl overflow-hidden shadow-lg border border-gray-100 bg-gray-50 aspect-video relative group">
                 <iframe 
@@ -285,13 +298,22 @@ function Pengaduan() {
           <motion.div variants={fadeInUp} className="bg-white p-2 rounded-3xl shadow-xl border border-blue-100">
             <div className="bg-gray-50 rounded-2xl p-8 flex flex-col items-center justify-center text-center min-h-[500px] border-2 border-dashed border-gray-200 relative overflow-hidden">
               <Shield className="w-16 h-16 text-primary mb-4 opacity-50" />
-              <h3 className="text-2xl font-bold text-gray-800 mb-2">Form Pengaduan Bullying</h3>
-              <p className="text-gray-500 max-w-md mx-auto mb-6">
+              {/* <h3 className="text-2xl font-bold text-gray-800 mb-2">Form Pengaduan Bullying</h3> */}
+              {/* <p className="text-gray-500 max-w-md mx-auto mb-6">
                 Ini adalah placeholder untuk Google Form sekolah. Hubungi guru BK untuk mendapatkan link form pengaduan resmi sekolah.
-              </p>
-              <Button disabled variant="secondary" className="opacity-50 cursor-not-allowed">
+              </p> */}
+              {/* <Button disabled variant="secondary" className="opacity-50 cursor-not-allowed">
                 Form Belum Tersedia
-              </Button>
+              </Button> */}
+              <iframe
+                src="https://docs.google.com/forms/d/e/1FAIpQLSfQb-8VelYuz4YmFtaCKywDNhLTo4N8puiksI6orfsP5VdPDQ/viewform?embedded=true"
+                width="100%"
+                height="600"
+                frameborder="0"
+                marginheight="0"
+                marginwidth="0">
+              Loading…
+              </iframe>
             </div>
           </motion.div>
 
