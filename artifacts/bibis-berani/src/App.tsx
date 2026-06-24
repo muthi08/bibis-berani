@@ -350,7 +350,7 @@ function Kontak() {
               <div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Guru BK</h3>
                 <p className="text-gray-600">
-                  Kunjungi ruang Bimbingan Konseling di sekolah saat jam istirahat untuk bercerita secara langsung.
+                  Kunjungi ruang Bimbingan Konseling di SD Negeri Bibis saat jam istirahat untuk bercerita secara langsung.
                 </p>
               </div>
             </motion.div>
@@ -360,12 +360,12 @@ function Kontak() {
                 <Mail className="w-7 h-7" />
               </div>
               <div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Email Sekolah</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Kirim Pesan ke Sekolah</h3>
                 <p className="text-gray-600 mb-4">
-                  Kirimkan email ke alamat sekolah jika kamu merasa lebih nyaman secara tertulis.
+                  Kirimkan pesan ke Whatsapp sekolah jika kamu merasa lebih nyaman secara tertulis.
                 </p>
-                <a href="mailto:bk@sekolah.sch.id" className="inline-flex items-center font-semibold text-primary hover:text-primary/80 transition-colors">
-                  bk@sekolah.sch.id <ArrowRight className="ml-1 w-4 h-4" />
+                <a href="https://wa.me/6288985425509" className="inline-flex items-center font-semibold text-primary hover:text-primary/80 transition-colors">
+                  Chat WhatsApp <ArrowRight className="ml-1 w-4 h-4" />
                 </a>
               </div>
             </motion.div>
@@ -382,7 +382,12 @@ function Footer() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-2 text-white font-bold text-xl tracking-tight">
-            <Shield className="w-6 h-6 text-secondary" />
+            {/* <Shield className="w-6 h-6 text-secondary" /> */}
+            <img
+              src={schoolLogo}
+              alt="Logo SD Bibis Kasihan"
+              className="w-10 h-10 rounded-full object-cover border-2 border-white shadow-sm"
+            />
             <span>BIBIS BERANI</span>
           </div>
           
@@ -391,6 +396,12 @@ function Footer() {
             <button onClick={() => scrollTo('edukasi')} className="hover:text-white transition-colors">Edukasi</button>
             <button onClick={() => scrollTo('pengaduan')} className="hover:text-white transition-colors">Pengaduan</button>
             <button onClick={() => scrollTo('kontak')} className="hover:text-white transition-colors">Kontak</button>
+          </div>
+        </div>
+
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="mt-4 pt-4 text-center text-sm flex flex-col md:flex-row items-center justify-between gap-4">
+            <p>5827+4W2, Bibis, Bangunjiwo, Kec. Kasihan, Kabupaten Bantul, Daerah Istimewa Yogyakarta.</p>
           </div>
         </div>
         
