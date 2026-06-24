@@ -5,7 +5,7 @@ import schoolLogo from "@assets/logo_sd_bibis_1782278696623.jpeg";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.25, 0.1, 0.25, 1] as const } }
 };
 
 const staggerContainer = {
@@ -309,9 +309,9 @@ function Pengaduan() {
                 src="https://docs.google.com/forms/d/e/1FAIpQLSfQb-8VelYuz4YmFtaCKywDNhLTo4N8puiksI6orfsP5VdPDQ/viewform?embedded=true"
                 width="100%"
                 height="600"
-                frameborder="0"
-                marginheight="0"
-                marginwidth="0">
+                frameBorder="0"
+                marginHeight={0}
+                marginWidth={0}>
               Loading…
               </iframe>
             </div>
